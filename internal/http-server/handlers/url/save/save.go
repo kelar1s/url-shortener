@@ -28,6 +28,8 @@ type Response struct {
 	resp.Response
 	Alias string `json:"alias,omitempty"`
 }
+
+//go:generate mockery --name=URLSaver --with-expecter=true --case=underscore --output=./mocks --outpkg=mocks
 type URLSaver interface {
 	SaveURL(urlToSave string, alias string) (int64, error)
 }

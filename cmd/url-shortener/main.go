@@ -10,7 +10,7 @@ import (
 	"github.com/kelar1s/url-shortener/internal/config"
 	"github.com/kelar1s/url-shortener/internal/http-server/handlers/url/save"
 	mwLogger "github.com/kelar1s/url-shortener/internal/http-server/middleware/logger"
-	slogpretty "github.com/kelar1s/url-shortener/internal/lib/logger/handlers"
+	slogpretty "github.com/kelar1s/url-shortener/internal/lib/logger/handlers/slogpretty"
 	"github.com/kelar1s/url-shortener/internal/lib/logger/sl"
 	"github.com/kelar1s/url-shortener/internal/storage/sqlite"
 )
