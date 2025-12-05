@@ -15,6 +15,7 @@ const (
 	host = "localhost:8082"
 )
 
+
 func TestURLShortener_HappyPath(t *testing.T) {
 	u := url.URL{
 		Scheme: "http",
