@@ -30,12 +30,21 @@ func main() {
 	log.Debug("debug messages are enabled")
 	log.Error("error messages are enabled")
 
+	// ssoClient, err := ssogrpc.New(
+	// 	context.Background(),
+	// 	log,
+	// 	cfg.Clients.SSO.Address,
+	// 	cfg.Clients.SSO.Timeout,
+	// 	cfg.Clients.SSO.RetriesCount,
+	// )
+
 	storage, err := sqlite.New(cfg.StoragePath)
 	if err != nil {
 		log.Error("failed to init storage", sl.Err(err))
 		os.Exit(1)
 	}
 
+	// ssoClient.IsAdmin(context.Background(), 1)
 	router := chi.NewRouter()
 
 	// middleware
